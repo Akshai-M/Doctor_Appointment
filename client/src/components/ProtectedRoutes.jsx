@@ -9,7 +9,15 @@ function ProtectedRoutes(props) {
     const navigate = useNavigate()
     const dispatch = useDispatch()
 
-    
+    const getUser = async () => {
+        try {
+            
+
+        } catch (error) {
+            console.log(error);
+            
+        }
+    }
 
     useEffect(() => {
         getUser()
