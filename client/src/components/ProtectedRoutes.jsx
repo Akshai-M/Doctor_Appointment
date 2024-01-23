@@ -11,11 +11,19 @@ function ProtectedRoutes(props) {
 
     const getUser = async () => {
         try {
+            const response = await axiosInstance.post('/user/getUser', {
+                token: localStorage.getItem('token')
+            }, {
+                headers: {
+                    "Authorization": `Bearer ${localStorage.getItem("token")}`
+                }
+            })
             
 
         } catch (error) {
             console.log(error);
-            
+            localStorage.clear()
+            navigate('/signin')
         }
     }
 
