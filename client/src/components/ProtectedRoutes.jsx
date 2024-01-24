@@ -18,7 +18,15 @@ function ProtectedRoutes(props) {
                     "Authorization": `Bearer ${localStorage.getItem("token")}`
                 }
             })
-            
+            // console.log(response.data.user);
+
+            if (response.data.success) {
+                dispatch(setUser(response.data.user))
+            }
+            else {
+                localStorage.clear()
+                navigate('/signin')
+            }
 
         } catch (error) {
             console.log(error);
