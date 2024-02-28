@@ -109,6 +109,8 @@ const applyDoctor = async (req, res) => {
             isAdmin: true
         })
 
+        const unseenNotifications = adminUser.unseenNotifications
+        
     } catch (error) {
         console.log(error);
     }
