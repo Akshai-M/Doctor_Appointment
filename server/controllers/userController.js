@@ -110,7 +110,11 @@ const applyDoctor = async (req, res) => {
         })
 
         const unseenNotifications = adminUser.unseenNotifications
-        
+        unseenNotifications.push({
+            
+        })
+       
+
     } catch (error) {
         console.log(error);
     }
