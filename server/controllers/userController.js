@@ -111,11 +111,17 @@ const applyDoctor = async (req, res) => {
 
         const unseenNotifications = adminUser.unseenNotifications
         unseenNotifications.push({
-            
+            type: "new-doctor-request",
+            message: `A new doctor account has been requested. Kindly login and approve. ${doctor.username}`,
+            data: {
+                doctorId: doctor._id,
+                name: doctor.username
+            },
+            onClickPath: "/admin/doctors"
         })
-       
 
     } catch (error) {
         console.log(error);
     }
 }
+
