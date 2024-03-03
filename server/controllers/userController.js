@@ -119,9 +119,18 @@ const applyDoctor = async (req, res) => {
             },
             onClickPath: "/admin/doctors"
         })
+        adminUser.unseenNotifications = unseenNotifications
+        
 
     } catch (error) {
         console.log(error);
     }
 }
 
+
+export {
+    signup,
+    signin,
+    getUser,
+    applyDoctor
+}
