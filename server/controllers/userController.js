@@ -120,7 +120,12 @@ const applyDoctor = async (req, res) => {
             onClickPath: "/admin/doctors"
         })
         adminUser.unseenNotifications = unseenNotifications
-        
+        await User.findByIdAndUpdate(adminUser._id, {unseenNotifications})
+
+        return res.status(200).json({
+            success: true,
+            message: "Doctor applied successfully"
+        })
 
     } catch (error) {
         console.log(error);
@@ -128,9 +133,3 @@ const applyDoctor = async (req, res) => {
 }
 
 
-export {
-    signup,
-    signin,
-    getUser,
-    applyDoctor
-}
