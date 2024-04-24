@@ -76,3 +76,7 @@ const signin = async (req, res) => {
         console.log(error);
     }
 }
+
+const getUser = async (req, res) => {
+    
+}
