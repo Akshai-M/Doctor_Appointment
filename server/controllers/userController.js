@@ -78,5 +78,12 @@ const signin = async (req, res) => {
 }
 
 const getUser = async (req, res) => {
-    
+    try {
+        const user = await User.findById(req.userId)
+
+        
+    }
+    catch (error) {
+        console.log(error);
+    }
 }
