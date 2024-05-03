@@ -133,3 +133,9 @@ const applyDoctor = async (req, res) => {
 }
 
 
+export {
+    signup,
+    signin,
+    getUser,
+    applyDoctor
+}
