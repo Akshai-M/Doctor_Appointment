@@ -88,6 +88,12 @@ const getUser = async (req, res) => {
             })
         }
 
+        console.log(user);
+        return res.status(200).json({
+            success: true,
+            message: "User found",
+            user
+        })
     }
     catch (error) {
         console.log(error);
