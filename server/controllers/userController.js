@@ -99,3 +99,11 @@ const getUser = async (req, res) => {
         console.log(error);
     }
 }
+
+const applyDoctor = async (req, res) => {
+    try {
+        
+    } catch (error) {
+        console.log(error);
+    }
+}
