@@ -102,7 +102,13 @@ const getUser = async (req, res) => {
 
 const applyDoctor = async (req, res) => {
     try {
-        
+        const doctor = new Doctor(req.body);
+        await doctor.save();
+
+        const adminUser = await User.findOne({
+            isAdmin: true
+        })
+
     } catch (error) {
         console.log(error);
     }
