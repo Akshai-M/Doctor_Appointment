@@ -61,4 +61,6 @@ const signin = async (req, res) => {
         else {
             const token = jwt.sign({
                 id: userExists._id,
+            }, process.env.JWT_SECRET, {
+                expiresIn: "1d"
             })
