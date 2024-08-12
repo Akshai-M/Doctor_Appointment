@@ -64,3 +64,11 @@ const signin = async (req, res) => {
             }, process.env.JWT_SECRET, {
                 expiresIn: "1d"
             })
+
+            return res.status(200).json({
+                success: true,
+                message: "User logged in successfully",
+                data: userExists,
+                token
+            })
+        
