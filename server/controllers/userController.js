@@ -71,4 +71,8 @@ const signin = async (req, res) => {
                 data: userExists,
                 token
             })
-        
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
