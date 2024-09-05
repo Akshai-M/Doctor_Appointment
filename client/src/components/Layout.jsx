@@ -6,7 +6,10 @@ function Layout({ children }) {
     const { user } = useSelector(state => state.user);
     const location = useLocation();
 
-    
+    const handleLogout = () => {
+        localStorage.clear()
+        navigate('/signin')
+    }
 
     const userMenu = [];
 
