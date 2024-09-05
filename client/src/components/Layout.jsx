@@ -13,7 +13,24 @@ function Layout({ children }) {
 
     const userMenu = [];
 
-    const adminMenu = [];
+    const adminMenu = [
+        {
+            name: "Home",
+            link: "/home"
+        },
+        {
+            name: "Appointments",
+            link: "/appointments"
+        },
+        {
+            name: "Doctors",
+            link: "/doctors"
+        },
+        {
+            name: "Profile",
+            link: "/profile"
+        }
+    ];
 
     const menuToBeRendered = user?.isAdmin ? adminMenu : userMenu;
 
