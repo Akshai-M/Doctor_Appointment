@@ -42,4 +42,7 @@ const signin = async (req, res) => {
         const userExists = await User.findOne({
             email: req.body.email
         })
-    
+
+        if (!userExists) {
+            res.status(400).json({
+                
