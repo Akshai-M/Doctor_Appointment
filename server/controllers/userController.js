@@ -45,4 +45,7 @@ const signin = async (req, res) => {
 
         if (!userExists) {
             res.status(400).json({
-                
+                success: false,
+                message: "User doesn't exist"
+            })
+        }
