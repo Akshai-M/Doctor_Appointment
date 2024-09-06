@@ -11,7 +11,24 @@ function Layout({ children }) {
         navigate('/signin')
     }
 
-    const userMenu = [];
+    const userMenu = [
+        {
+            name: "Home",
+            link: "/home"
+        },
+        {
+            name: "Appointments",
+            link: "/appointments"
+        },
+        {
+            name: "Apply Doctor",
+            link: "/applyDoctor"
+        },
+        {
+            name: "Profile",
+            link: "/profile"
+        }
+    ];
 
     const adminMenu = [
         {
