@@ -49,3 +49,5 @@ const signin = async (req, res) => {
                 message: "User doesn't exist"
             })
         }
+
+        const isMatch = await bcrypt.compare(req.body.password, userExists.password)
