@@ -51,3 +51,10 @@ const signin = async (req, res) => {
         }
 
         const isMatch = await bcrypt.compare(req.body.password, userExists.password)
+
+        if (!isMatch) {
+            return res.status(400).json({
+                success: false,
+            })
+        }
+        
