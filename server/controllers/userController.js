@@ -58,4 +58,7 @@ const signin = async (req, res) => {
                 message: "Password doesn't match"
             })
         }
-        
+        else {
+            const token = jwt.sign({
+                id: userExists._id,
+            })
